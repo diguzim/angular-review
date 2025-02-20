@@ -1,7 +1,7 @@
 <main class="main">
   <h1>App Component</h1>
   <p>Counter: {{ count() }}</p>
-  <app-counter label="RenamedCounter" [(count)]="count"></app-counter>
+  <app-counter label="RenamedCounter" [(count)]="count" (randomOutput)="randomOutputHandler($event)"></app-counter>
 </main>
 
 <router-outlet />
