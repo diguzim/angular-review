@@ -1,5 +1,7 @@
 <main class="main">
-  <app-counter></app-counter>
+  <h1>App Component</h1>
+  <p>Counter: {{ count() }}</p>
+  <app-counter label="RenamedCounter" [(count)]="count"></app-counter>
 </main>
 
 <router-outlet />

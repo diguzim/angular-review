@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CounterComponent } from './counter/counter.component';
 import { PostComponent } from './components/post/post.component';
 import { BlogService } from './services/blog.service';
+import { Post } from './models/interfaces/post.interface';
 
 @Component({
   selector: 'app-root',
@@ -13,4 +14,5 @@ import { BlogService } from './services/blog.service';
 })
 export class AppComponent {
   title = 'angular-review';
+  count = signal(0);
 }

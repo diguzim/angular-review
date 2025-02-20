@@ -1,4 +1,4 @@
-import { Component, signal, computed, effect } from '@angular/core';
+import { Component, computed, effect, input, model } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
@@ -7,11 +7,12 @@ import { Component, signal, computed, effect } from '@angular/core';
   styleUrl: './counter.component.scss',
 })
 export class CounterComponent {
-  count = signal(0);
+  label = input('MyCounter');
+  count = model(0);
   isEven = computed(() => this.count() % 2 === 0);
 
   private loggingEffect = effect(() => {
-    console.log('Current count is', this.count());
+    console.log(`Current value of ${this.label} is ${this.count()}`);
   });
 
   increment() {
