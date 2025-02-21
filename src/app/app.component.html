@@ -1,5 +1,8 @@
 <main class="main">
   <h1>App Component</h1>
+  <app-card>
+    <p>Hello I wanna fill!</p>
+  </app-card>
   <p>Counter: {{ count() }}</p>
   <app-counter label="RenamedCounter" [(count)]="count" (randomOutput)="randomOutputHandler($event)"></app-counter>
 </main>
